@@ -11,7 +11,7 @@ var createRepoData = JSON.stringify(
     "name":"+targetRepoName+",
     "description":"Repo created from a template",
     "include_all_branches":false,
-    "private":true}'
+    "private":true'
   }
 );
 const targetOrgName = github.context.payload.repository.owner.login;
