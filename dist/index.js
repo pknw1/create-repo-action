@@ -11480,6 +11480,7 @@ const core = __nccwpck_require__(6881);
 const github = __nccwpck_require__(9510);
 const axios = __nccwpck_require__(6284);
 
+const sourceRepoName = core.getInput('source-name');
 const targetRepoName = core.getInput('repo-name');
 const ghToken = core.getInput('org-admin-token');
 var createRepoData = JSON.stringify(
@@ -11495,7 +11496,7 @@ const targetOrgName = github.context.payload.repository.owner.login;
 
 var config = {
   method: 'post',
-  url: 'https://api.github.com/repos/'+targetOrgName+'/'+targetOrgName+'generate',
+  url: 'https://api.github.com/repos/'+targetOrgName+'/'+targetOrgName+'/generate',
   headers: { 
     'Accept': 'application/vnd.github.v3+json', 
     'Authorization': 'token '+ghToken, 
