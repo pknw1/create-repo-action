@@ -5,6 +5,10 @@ branding:
   color: 'blue'
 
 inputs:
+  source-repo:
+    description: "source"
+    required: true
+    default: ''
   repo-name:  # change this as needed
     description: 'What is the name of the repository?'
     required: true
