@@ -11499,7 +11499,7 @@ var config = {
   url: 'https://api.github.com/repos/'+targetOrgName+'/'+sourceRepoName+'/generate',
   headers: { 
     'Accept': 'application/vnd.github.v3+json', 
-    'Authorization': 'token '+ghToken, 
+    'Authorization': 'Bearer '+ghToken, 
     'Content-Type': 'application/json'
   },
   data : createRepoData
