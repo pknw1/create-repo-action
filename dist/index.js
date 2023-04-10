@@ -11500,7 +11500,9 @@ var config = {
   headers: { 
     'Accept': 'application/vnd.github.v3+json', 
     'Authorization': 'Bearer '+ghToken, 
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'X-GitHub-Api-Version': '2022-11-28'
+
   },
   data : createRepoData
 };
