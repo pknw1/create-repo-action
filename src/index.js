@@ -7,7 +7,7 @@ const targetRepoName = core.getInput('repo-name');
 const ghToken = core.getInput('org-admin-token');
 var createRepoData = JSON.stringify(
   {
-    "owner":"NEW-REPO-OWNER",
+    "owner": "+targetOrgName+",
     "name":"NEW-REPO-NAME",
     "description":"Repo created from a template",
     "include_all_branches":false,
