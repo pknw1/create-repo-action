@@ -11483,17 +11483,19 @@ const axios = __nccwpck_require__(6284);
 const targetRepoName = core.getInput('repo-name');
 const ghToken = core.getInput('org-admin-token');
 var createRepoData = JSON.stringify(
-  {
-    "name":targetRepoName,
-    "private":true,
-    "visibility":"private"
+    {
+    "owner":"+targetOrgName+",
+    "name":"+targetRepoName+",
+    "description":"Repo created from a template",
+    "include_all_branches":false,
+    "private":true}'
   }
 );
 const targetOrgName = github.context.payload.repository.owner.login;
 
 var config = {
   method: 'post',
-  url: 'https://api.github.com/orgs/'+targetOrgName+'/repos',
+  url: 'https://api.github.com/repos/'+targetOrgName+'/'+targetOrgName+'generate',
   headers: { 
     'Accept': 'application/vnd.github.v3+json', 
     'Authorization': 'token '+ghToken, 
